@@ -35,4 +35,46 @@ Laboratório kubernetes
    3) Azure Container Registry
    4) Google Container Registry
    5) Harbor
-    
+
+8) Kubernetes formas de cluster
+   1) On_Premisse
+      1) Kubeadm
+      2) Kubespray
+      3) RKE
+      4) K3S
+      5) MicroK85
+   2) Kubernetes as a Service
+      1) AKS - Azure
+      2) EKS - AWS
+      3) GKS - Google
+      4) OKE - Oracle
+   3) Local
+      1) Minikube
+      2) Kind
+      3) K3D
+      4) MicroK8S *
+      5) K3S *
+
+9) Kind - Kubernetes In Docker
+   1)  Instalação do Kubectl
+     https://kind.sigs.k8s.io/docs/user/quick-start/#installation
+     https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
+
+10) Criação do cluster
+    kind create cluster
+    kind create cluster --name meucluster
+
+    kubectl get nodes
+    kind get clusters
+    kind delete cluster
+
+11) Usando arquivo config
+    kind create cluster --name meucluster -- config cluster.yaml
+
+12) Criando Pod
+    kubectl create -f meupod.yaml (apply)
+    kubectl get pods
+    kubectl describe pod meupod
+
+    kubectl port-forward pod/meupod 8080:80
+    kubectl delete pod meupod
